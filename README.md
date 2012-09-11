@@ -1,0 +1,4 @@
+MPI-Type-checker
+================
+
+A program build as a clang plugin in order to enhance communication safety of MPI programs. This is performed by extracting the MPI primitives and the language constructs from a given source code. Following that a global protocol given to the program will be projected into local protocols. The type checker checks the conformance between the trees generated from the extractor and the trees representing their corresponding local protocols. If type checking is successful then the communication safety is preserved. Otherwise, the type checker will print the trees showing the errors found.
