@@ -1,0 +1,10 @@
+/* A Global protocol with nested recurion blocks */
+global protocol P (role 1, role 2, role 3) {
+    rec X {
+        rec Y {
+            (int) from 1 to 2;
+        }
+        (char) from 2 to 1;
+        continue X;
+    }
+}
